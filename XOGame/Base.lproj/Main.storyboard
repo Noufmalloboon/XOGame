@@ -1,24 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XOGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-1K-nJi">
+                                <rect key="frame" x="20" y="79" width="353" height="719"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-Nk-NjM">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="137.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qn0-Vd-dfT" userLabel="scoreXLabel">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="137.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txl-jH-73q" userLabel="turnLabel">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bK-qB-k5k" userLabel="scoreOLabel">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EDv-VL-S2P" userLabel="Row1Stack">
+                                        <rect key="frame" x="0.0" y="145.33333333333331" width="353" height="137.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUb-1H-kmS">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uoy-D7-6xW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af9-rX-TNx">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wBZ-sg-8ZY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMu-ju-y80">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wcn-Jo-n0L"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="chH-ZY-7kO" userLabel="Row2Stack">
+                                        <rect key="frame" x="0.0" y="290.66666666666669" width="353" height="137.66666666666669"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2b-SP-i8c">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="137.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0A-0P-pDu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCw-lN-Gdg">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="112.33333333333334" height="137.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ELv-wT-2m3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71l-9c-g8r">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="112.33333333333334" height="137.66666666666666"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mks-co-YRl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AwP-qH-elo" userLabel="Row3Stack">
+                                        <rect key="frame" x="0.0" y="436.33333333333337" width="353" height="137.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbU-MA-zfb">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.33333333333333" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q0Q-UC-fTw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAo-Mm-ifG">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JxV-gR-zYO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRA-n4-mNv">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="112.33333333333334" height="137.33333333333334"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="cellTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C8v-n6-Qyu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="m9n-TG-cIG" userLabel="Row4Stack">
+                                        <rect key="frame" x="0.0" y="581.66666666666663" width="353" height="137.33333333333337"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pf-mC-Uzs">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="137.33333333333334"/>
+                                                <color key="backgroundColor" red="0.63025247327289691" green="0.60432834178824257" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reset Round">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetRoundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVj-kv-XeC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-CR-xPY">
+                                                <rect key="frame" x="180.66666666666663" y="0.0" width="172.33333333333337" height="137.33333333333334"/>
+                                                <color key="backgroundColor" red="0.94328004119999997" green="0.7034773955411463" blue="0.46690888061065944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reset All">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="resetAllTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOb-fI-IdZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rfp-1K-nJi" secondAttribute="trailing" constant="20" id="6sG-IW-38Z"/>
+                            <constraint firstItem="Rfp-1K-nJi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JZW-YG-Up2"/>
+                            <constraint firstItem="Rfp-1K-nJi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dkD-go-wac"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rfp-1K-nJi" secondAttribute="bottom" constant="20" id="yrM-lZ-7RG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scoreOLabel" destination="6bK-qB-k5k" id="hNf-Gb-akb"/>
+                        <outlet property="scoreXLabel" destination="qn0-Vd-dfT" id="lqX-wT-Xfh"/>
+                        <outlet property="turnLabel" destination="txl-jH-73q" id="y5k-Qm-dx5"/>
+                        <outletCollection property="cells" destination="uUb-1H-kmS" collectionClass="NSMutableArray" id="ltJ-tC-vfr"/>
+                        <outletCollection property="cells" destination="af9-rX-TNx" collectionClass="NSMutableArray" id="zhh-cL-2Mh"/>
+                        <outletCollection property="cells" destination="aMu-ju-y80" collectionClass="NSMutableArray" id="bOm-Lt-xUF"/>
+                        <outletCollection property="cells" destination="m2b-SP-i8c" collectionClass="NSMutableArray" id="KYQ-XV-kbM"/>
+                        <outletCollection property="cells" destination="aCw-lN-Gdg" collectionClass="NSMutableArray" id="RX5-B4-Xaa"/>
+                        <outletCollection property="cells" destination="71l-9c-g8r" collectionClass="NSMutableArray" id="Zn2-YO-nms"/>
+                        <outletCollection property="cells" destination="vbU-MA-zfb" collectionClass="NSMutableArray" id="ecd-CS-BxQ"/>
+                        <outletCollection property="cells" destination="nAo-Mm-ifG" collectionClass="NSMutableArray" id="Eu2-x1-NVP"/>
+                        <outletCollection property="cells" destination="yRA-n4-mNv" collectionClass="NSMutableArray" id="Lhv-6q-nGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="21" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
